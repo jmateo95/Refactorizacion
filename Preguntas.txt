@@ -1,0 +1,41 @@
+Editor de codigo: Visual Studio Code.
+D:\Descargas\Refactorizacion\RegistroDeTarjetas_original\src\Entrada\ArchivoDeEntrada.txt
+
+
+
+Primer error archivo /src/NumeroDeTarjeta/Regional hay un punto y coma volando en la linea 2
+
+¿El código implementa un patrón de diseño?
+No, lo unico que tiene es separada la logica pero mas que por objetos o aplicativos parece tenerlo por los eventos que pueden suceder
+en el sistema.
+
+
+¿Es el código altamente acoplado?
+Si por que por ejemplo en la clase Instruccion nos damos cuenta que esta la mayoria de la logica y cualquier cambio aqui repercute directamaente
+en el comportamiento del software.
+
+
+¿Es el código testeable?
+Si bien hasta cierto modo es testeable la testeabilidad esta mas realizada a una gran funcion y no a funciones pequeñas como las pruebas unitarias.
+si se puede probar una funcion macro pero a nivel micro no existe la division de metodos.
+
+
+¿Es el código humanamente leíble?
+Maso menos por que si bien en lagunos lugares  esto es entendible el uso de metodos vacios y funciones que no terminarion de implementarse crea
+confucion entre lo que sirve y lo que no.
+
+
+¿Está el código duplicado?
+Pues para ser un proyecto de ipc1 no se reutilizo tanto codigo entonces aunque si hay codigo duplicado no es demasiado como pense en un inicio
+
+¿Es el código muy largo como para entenderlo?
+No cada clase es relatvamente pequeña pero no sigue ningun patron entonces es dificil percibir la importancia de cada linea de  codigo.
+
+
+
+//Cosas que vi en el codigo
+el manejador de  archivos  maneja un pseudo Singleton pero implementa cosas  extras que  no  deberian estar en una instancia  unica asi que
+se corrigio
+
+Se crearon tres clases Singleton una Para un menejador de archivos y una para Manejador de instrucciones y otra para el calculo de numero de tarjetas(los dos ultimos son como una fabrica de  instrucciones)
+
